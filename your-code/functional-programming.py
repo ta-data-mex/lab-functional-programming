@@ -42,11 +42,12 @@ iris_head = iris.head()
 #print('Standar deviation:', np.std(iris))
 
 iris_df = pd.DataFrame(iris) #Set dataframe as pandas dataframe
-iris_numeric = iris_df.select_dtypes(include='number') #new pandas df include only numeric columns
-print(iris_numeric) #print this mofo
+#iris_numeric = iris_df.select_dtypes(include='number') #new pandas df include only numeric columns
+iris_numeric = iris_df.select_dtypes(include=[np.number])*0.393701 #new pandas df include only numeric columns
+#print(iris_numeric) #print this mofo
 
-#def cm_to_in(x):
- #   for x in iris_numeric:
-  #      print(x)
+def cm_to_in(x):
+    x = iris_df.select_dtypes(include=[np.number])*0.393701
+    return x
 
-#print(10)
+print(cm_to_in(1))
