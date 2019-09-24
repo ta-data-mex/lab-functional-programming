@@ -44,10 +44,27 @@ iris_head = iris.head()
 iris_df = pd.DataFrame(iris) #Set dataframe as pandas dataframe
 #iris_numeric = iris_df.select_dtypes(include='number') #new pandas df include only numeric columns
 iris_numeric = iris_df.select_dtypes(include=[np.number])*0.393701 #new pandas df include only numeric columns
-#print(iris_numeric) #print this mofo
+print(iris_numeric) #print this mofo
 
 def cm_to_in(x):
     x = iris_df.select_dtypes(include=[np.number])*0.393701
     return x
 
-print(cm_to_in(1))
+#print(cm_to_in(1))
+
+# Define constant below:
+error = 2
+
+
+def add_constant(x):
+    # This function adds a global constant to our input.
+    # Input: numeric value
+    # Output: numeric value
+
+    # Your code here:
+    x = iris_numeric.select_dtypes(include=[np.number]) + 2
+    return x
+
+
+
+print(max_value)
