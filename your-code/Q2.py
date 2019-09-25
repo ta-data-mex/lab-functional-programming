@@ -57,4 +57,4 @@ bow = get_bow_from_docs([
         'www.lipsum.com.html'
     ], stop_words.ENGLISH_STOP_WORDS)
 
-print(bow)
+
